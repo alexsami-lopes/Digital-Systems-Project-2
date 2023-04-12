@@ -8,12 +8,15 @@ CFLAGS	=	$(DEBUG) -Wall $(INCLUDE) -Winline -pipe
 LDFLAGS	=	-L/usr/local/lib
 LDLIBS	=	-lwiringPi -lwiringPiDev  -lpthread -lm -lcrypt -lrt 
 
-SRC		=	initialize_LCD.c blink.c blink_lcd.c lcd.c blink2.c 
+SRC		=	initialize_LCD.c blink.c blink_lcd.c lcd.c blink2.c led.c
 OBJ		=	$(SRC:.c=.o)
 BINS	=   $(SRC:.c=)
 
 rm:
 	rm blink initialize_LCD
+led:	led.o
+		$Q $(CC) -o $@ led.o $(LDFLAGS) $(LDLIBS)
+		sudo ./led
 
 blink:	blink.o
 		$Q $(CC) -o $@ blink.o $(LDFLAGS) $(LDLIBS)
