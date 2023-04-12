@@ -17,8 +17,12 @@ Code tested in 10/04/2023 with the objective to turn on a led, to initialize and
       1. apt-get update
       2. apt-get install -y git
       3. git clone https://github.com/orangepi-xunlong/wiringOP.git
- ## How to download, compile and use Project 2
+ ## How to download, compile and use Project 2 to Print "Funcionando" on the display
    #### On the terminal logged to the Orange Pi by ssh type:
     1. git clone https://github.com/alexsami-lopes/Digital-Systems-Project-2.git
     2. cd Digital-Systems-Project-2
     3. make initialize_LCD
+    
+   #### To turn on the led, on the terminal logged to the Orange Pi by ssh type:
+    1. make led
+
