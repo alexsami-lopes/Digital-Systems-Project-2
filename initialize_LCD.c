@@ -11,16 +11,13 @@
 #define LCD_D6  26               //Data pin 6
 #define LCD_D7  27               //Data pin 7
 
-
-
-
 int display = 0;
 
 int main (void)
 {
    wiringPiSetup();
    display = lcdInit (2, 16, 4, LCD_RS, LCD_E, LCD_D4, LCD_D5, LCD_D6, LCD_D7, 0, 0, 0, 0);
-   lcdPuts(display, "Wiring OP - LCD");
+   lcdPuts(display, "Funcionando");
    return 0;
 
 }
